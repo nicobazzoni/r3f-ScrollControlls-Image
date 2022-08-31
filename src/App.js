@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from "react";
+import twitter from "./assets/twitter.svg";
+import Images from "./components/Images";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Suspense fallback={null}>
+        <Images />
+      </Suspense>
+      <Header />
+      <a
+        href="https://twitter.com/NowMoDesign/"
+        style={{ position: "absolute", bottom: 40, left: "4vw", width: 50 }}
+      >
+        <img src={twitter} alt="logo" />
+      </a>
+      <Footer />
+    </>
   );
 }
 
