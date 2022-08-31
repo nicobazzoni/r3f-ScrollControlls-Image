@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import twitter from "./assets/twitter.svg";
+import Twitter from "./assets/Twitter";
 import Images from "./components/Images";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -17,7 +17,7 @@ function App() {
         href="https://twitter.com/NowMoDesign/"
         style={{ position: "absolute", bottom: 40, left: "4vw", width: 50 }}
       >
-        <img src={twitter} alt="logo" />
+        <Twitter />
       </a>
       <Footer />
     </>
